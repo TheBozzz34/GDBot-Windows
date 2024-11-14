@@ -42,7 +42,7 @@ Transition = namedtuple('Transition',
 
 
 resize = T.Compose([T.ToPILImage(),
-                    T.Resize(40, interpolation=(Image.CUBIC)),
+                    T.Resize(40, interpolation=(Image.LANCZOS)),
                     T.ToTensor()])
 
 # Helper class to feed data into network

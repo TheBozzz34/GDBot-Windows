@@ -17,7 +17,7 @@ from Helpers import get_screen,isalive
 if(platform.system() == "Windows"):
     from DirectInputWindows import bounce, restart
 else:
-    from DirectInputMac import bounce, restart
+    exit()
 
 #Check if GPU is supported
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

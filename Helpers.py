@@ -2,7 +2,7 @@
 import numpy as np
 import pyscreenshot
 import cv2
-from skimage.measure import compare_ssim
+from skimage.metrics import structural_similarity
 
 # Gets one frame
 def get_screen():
@@ -17,7 +17,7 @@ def get_screen():
 # Compares two following images and returns a boolean for alive. If the image is the "Restart?"
 # screen, structural similarity index will be 0.99+ which means the cube is dead. Else, it's alive.
 def isalive(screen1, screen2):
-    (score, diff) = compare_ssim(screen1, screen2, full=True)
+    (score, diff) = structural_similarity(screen1, screen2, full=True)
     if(score < 0.995):
         return True
     else:

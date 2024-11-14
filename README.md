@@ -1,6 +1,8 @@
 # Reinforcement Learning - Playing Geometry Dash using PyTorch 
 
-A deep q network that plays Geometry Dash  
+A working fork of GDBot, a deep q network that plays Geometry Dash  
+
+Only supports windows at the moment
 
 # Dependencies
 Python 3.6+  
